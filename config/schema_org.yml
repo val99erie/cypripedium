@@ -11,3 +11,10 @@ schema_org:
     property: description
     type: "http://schema.org/Text"
     value: description
+  identifier:
+    property: identifier
+    type: "http://schema.org/URL"
+    value: identifier
+  issue_number:
+    property: issueNumber
+    value: issueNumber

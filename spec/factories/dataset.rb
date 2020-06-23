@@ -11,6 +11,8 @@ FactoryBot.define do
       visibility { "open" }
       abstract { ["This is my abstract"] }
       description { ["This is my description"] }
+      identifier { ["https://doi.org/10.21034/sr.600"] }
+      issue_number { ["Vol. 33, No. 1"] }
     end
   end
 end

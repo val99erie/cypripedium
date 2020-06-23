@@ -4,7 +4,7 @@
 
 <% if @presenter.respond_to? :itemtype %>
 <%   unless @presenter.itemtype == "http://schema.org/Dataset" %>
-<%     itemtype = "http://schema.org/CreativeWork" %>
+<%     itemtype = "http://schema.org/PublicationIssue" %>
 <%   else %>
 <%     itemtype = "http://schema.org/Dataset"   %>
 <%   end %>
