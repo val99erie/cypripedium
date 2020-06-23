@@ -10,6 +10,7 @@ FactoryBot.define do
       resource_type { ["Dataset"] }
       visibility { "open" }
       abstract { ["This is my abstract"] }
+      description { ["This is my description"] }
     end
   end
 end

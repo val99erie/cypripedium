@@ -17,4 +17,10 @@ RSpec.describe 'Use structured data that Google can parse', type: :system, clean
     visit "/concern/publications/#{work.id}"
     expect(page.find(:css, '[itemprop="abstract"]').text).to eq "This is my abstract"
   end
+  it "marks description with schema.org tags" do
+    visit "/concern/publications/#{work.id}"
+    descriptions = page.all(:css, "[itemprop='description']")
+    expect(descriptions.first).not_to be_nil
+    expect(descriptions.first.text).to eq "This is my description"
+  end
 end
