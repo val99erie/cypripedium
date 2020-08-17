@@ -2,6 +2,7 @@
 class SolrDocument
   include Blacklight::Solr::Document
   include Blacklight::Gallery::OpenseadragonSolrDocument
+  include ActiveFedora::Indexing
 
   # Adds Hyrax behaviors to the SolrDocument.
   include Hyrax::SolrDocumentBehavior
@@ -22,7 +23,7 @@ class SolrDocument
 
   Attributes.to_a.each do |term|
     define_method(term) do
-      self[Solrizer.solr_name(term.to_s)]
+      self[ActiveFedora::Indexing::FieldMapper.new.solr_name(term.to_s)]
     end
   end
 
